@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Computer Search 2026</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Next-Gen<br class="mobile-break"><span class="desktop-space"> </span>PC Search</h1>
+        <p class="subtitle">A dynamic report for finding the perfect development workstation to replace the 2018 Windows 10 machine.</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- The Situation -->
+        <div class="glass-card">
+            <h2>🔍 The Current Situation</h2>
+            <p>Your current setup is reaching the end of its life cycle and is holding back your productivity:</p>
+            <ul>
+                <li>Current OS: <span class="highlight">Windows 10</span> (Hardware from 2018)</li>
+                <li>Issue: <span class="highlight">Incompatible with Windows 11</span></li>
+                <li>Issue: System hangs 1-2 times a week requiring hard restarts</li>
+                <li>Conclusion: It's time for an upgrade.</li>
+            </ul>
+        </div>
+
+        <!-- The Requirements -->
+        <div class="glass-card">
+            <h2>🎯 Core Requirements</h2>
+            <p>What the new machine absolutely needs to do:</p>
+            <ul>
+                <li><span class="highlight">Form Factor:</span> Laptop with a large screen (17-inch or 18-inch)</li>
+                <li><span class="highlight">Virtualization:</span> Run numerous <a href="https://www.docker.com/" target="_blank" rel="noopener noreferrer">Docker</a> containers</li>
+                <li><span class="highlight">OS Integration:</span> Windows + Linux (<a href="https://learn.microsoft.com/en-us/windows/wsl/" target="_blank" rel="noopener noreferrer">WSL2</a>) running simultaneously</li>
+                <li><span class="highlight">Creative:</span> Video editing with <a href="https://obsproject.com/" target="_blank" rel="noopener noreferrer">OBS Studio</a></li>
+                <li><span class="highlight">Use Case:</span> Heavy software development, <span class="highlight">No Gaming</span></li>
+                <li><span class="highlight">I/O:</span> Single external monitor support</li>
+                <li><span class="highlight">Mobility:</span> Not an important factor. The laptop can be larger/bulkier to save money, and battery life only needs to be at least 4 hours.</li>
+            </ul>
+        </div>
+
+        <!-- Hardware Analysis -->
+        <div class="glass-card full-width" style="animation-delay: 0.6s;">
+            <h2>⚙️ Hardware Analysis</h2>
+            <p>Based on your requirements, here is an analysis of what you think you need, and what you <em>actually</em> need for modern dev workflows:</p>
+            
+            <h3>Storage: At least 1 TB SSD</h3>
+            <p>✅ <span class="highlight">Correct, but consider 2 TB.</span> Docker images, WSL virtual disks, and video files from OBS will consume 1TB very quickly. Ensure the laptop has a fast Gen 4 NVMe SSD.</p>
+
+            <h3>RAM: More than 16 GB</h3>
+            <p>❌ <span class="highlight">Correction: You absolutely need 32 GB, and ideally 64 GB.</span> Running WSL2, Docker, and an IDE simultaneously will devour 16GB. 32 GB is the absolute minimum for your use case.</p>
+
+            <h3>GPU: A fast graphics card</h3>
+            <p>✅ <span class="highlight">Correct, but specifically you need an NVIDIA GPU.</span> For OBS hardware encoding (NVENC), NVIDIA dominates. You don't need a top-tier gaming GPU, but you do need VRAM. Look for an RTX 4060 (8GB VRAM) or RTX 4070 (8GB VRAM).</p>
+
+            <h3>Monitors: 1 External Display + Large Laptop Screen</h3>
+            <p>💡 <span class="highlight">Concept to understand:</span> By choosing a laptop with a massive 17-inch or 18-inch display, you gain desktop-like screen real estate on the go. Any modern laptop will effortlessly power your single additional external monitor via HDMI or USB-C.</p>
+        </div>
+
+        <!-- Recommendations -->
+        <div class="glass-card full-width" style="animation-delay: 0.8s;">
+            <h2>💻 Best option laptops</h2>
+            <p>If you don't need to run LLMs locally, you no longer need a dedicated NVIDIA GPU. Since mobility and thinness aren't priorities, we can focus on larger, cost-effective workstation laptops that offer exceptional cooling and durability for the price. <strong>All models in this category come with a 2TB SSD and 64GB of RAM</strong> to handle extensive Docker images and massive dev environments without breaking a sweat.</p>
+
+            <div class="laptop-grid">
+                <!-- Laptop 4 -->
+                <div class="laptop-card">
+                    <h3><a href="https://www.lenovo.com/" target="_blank" rel="noopener noreferrer">Lenovo ThinkPad P16v (AMD)</a></h3>
+                    <div class="laptop-price">€1,200 - €1,600</div>
+                    <p>A chunkier, value-oriented workstation. By not trying to be incredibly thin, it offers phenomenal cooling and performance per euro. Easily hits the 4-hour battery mark while packing a 2TB SSD and 64GB of RAM.</p>
+                    <div class="tags">
+                        <span class="tag">Excellent Cooling</span>
+                        <span class="tag">2TB SSD</span>
+                        <span class="tag">64GB RAM</span>
+                    </div>
+                </div>
+
+                <!-- Laptop 5 -->
+                <div class="laptop-card">
+                    <h3><a href="https://www.hp.com/" target="_blank" rel="noopener noreferrer">HP Envy 17</a> / <a href="https://www.dell.com/" target="_blank" rel="noopener noreferrer">Dell Inspiron 16 Plus</a></h3>
+                    <div class="laptop-price">€1,100 - €1,500</div>
+                    <p>Standard, bulkier consumer laptops that offer massive screens and powerful CPUs at a very low cost. Their larger chassis provides room for easy RAM and SSD upgrades to hit our 64GB/2TB requirement.</p>
+                    <div class="tags">
+                        <span class="tag">Budget Friendly</span>
+                        <span class="tag">2TB SSD</span>
+                        <span class="tag">64GB RAM</span>
+                    </div>
+                </div>
+
+                <!-- Laptop 6 -->
+                <div class="laptop-card">
+                    <h3><a href="https://frame.work/" target="_blank" rel="noopener noreferrer">Framework Laptop 16 (Without GPU)</a></h3>
+                    <div class="laptop-price">€1,700 - €2,100</div>
+                    <p>A fully repairable, thick 16-inch laptop. Without the GPU module attached, it's slightly bulky but provides a highly durable, desktop-like experience that you can upgrade for years. Includes the 2TB SSD and 64GB RAM.</p>
+                    <div class="tags">
+                        <span class="tag">Fully Upgradable</span>
+                        <span class="tag">2TB SSD</span>
+                        <span class="tag">64GB RAM</span>
+                    </div>
+                </div>
+            </div>
+
+            <h2 style="margin-top: 3rem;">💻 Laptops for local LLMs</h2>
+            <p>If you want the ability to run AI/ML models (like <a href="https://ollama.com/" target="_blank" rel="noopener noreferrer">Ollama</a> or <a href="https://lmstudio.ai/" target="_blank" rel="noopener noreferrer">LM Studio</a>) locally, you absolutely need a dedicated <a href="https://www.nvidia.com/" target="_blank" rel="noopener noreferrer">NVIDIA</a> GPU with plenty of VRAM. Here are the top picks that balance battery life and the immense power needed for running LLMs.</p>
+
+            <div class="laptop-grid">
+                <!-- Laptop 1 -->
+                <div class="laptop-card">
+                    <h3><a href="https://www.dell.com/" target="_blank" rel="noopener noreferrer">Dell XPS 17 / Precision 7780</a></h3>
+                    <div class="laptop-price">€2,500 - €3,500</div>
+                    <p>Massive 17-inch displays with premium build quality. Can be configured with huge amounts of RAM and high-end NVIDIA GPUs. Perfect for replacing a desktop environment while maintaining portability.</p>
+                    <div class="tags">
+                        <span class="tag">17.3" Display</span>
+                        <span class="tag">Premium Build</span>
+                        <span class="tag">Professional</span>
+                    </div>
+                </div>
+
+                <!-- Laptop 2 -->
+                <div class="laptop-card">
+                    <h3><a href="https://rog.asus.com/" target="_blank" rel="noopener noreferrer">ASUS ROG Strix 18</a> / <a href="https://www.razer.com/" target="_blank" rel="noopener noreferrer">Razer Blade 18</a></h3>
+                    <div class="laptop-price">€2,600 - €3,800</div>
+                    <p>While branded for gaming, these 18-inch monoliths offer desktop-replacement cooling and the absolute maximum screen real estate you can fit in a backpack. Features top-tier NVIDIA RTX cards.</p>
+                    <div class="tags">
+                        <span class="tag">Massive 18" Screen</span>
+                        <span class="tag">Desktop Replacement</span>
+                        <span class="tag">Max Performance</span>
+                    </div>
+                </div>
+
+                <!-- Laptop 3 -->
+                <div class="laptop-card">
+                    <h3><a href="https://www.lg.com/" target="_blank" rel="noopener noreferrer">LG Gram 17 Pro</a></h3>
+                    <div class="laptop-price">€1,800 - €2,400</div>
+                    <p>If you want a massive 17-inch screen without the back-breaking weight. It's incredibly light but still features a dedicated NVIDIA RTX GPU (usually RTX 3050 or 4050/4060) suitable for lighter AI workloads.</p>
+                    <div class="tags">
+                        <span class="tag">Ultra Lightweight</span>
+                        <span class="tag">17" Screen</span>
+                        <span class="tag">Good Battery</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Buying Guide -->
+        <div class="glass-card full-width" style="animation-delay: 1s;">
+            <h2>🛒 Where to Buy</h2>
+            <p>Here are some of the best places to buy PCs online and physically in Berlin:</p>
+            <ul>
+                <li><strong><a href="https://www.notebooksbilliger.de/" target="_blank" rel="noopener noreferrer">Notebooksbilliger (NBB)</a>:</strong> Great online prices. They have a physical store in <a href="https://www.google.com/maps/search/Notebooksbilliger+Berlin" target="_blank" rel="noopener noreferrer">Berlin (near Ku'damm)</a>.</li>
+                <li><strong><a href="https://www.cyberport.de/" target="_blank" rel="noopener noreferrer">Cyberport</a>:</strong> Another excellent online retailer with physical stores in Berlin (<a href="https://www.google.com/maps/search/Cyberport+Bikini+Berlin" target="_blank" rel="noopener noreferrer">Bikini Berlin</a>, <a href="https://www.google.com/maps/search/Cyberport+Steglitz+Berlin" target="_blank" rel="noopener noreferrer">Steglitz</a>).</li>
+                <li><strong><a href="https://www.lenovo.com/" target="_blank" rel="noopener noreferrer">Lenovo</a> / <a href="https://www.dell.com/" target="_blank" rel="noopener noreferrer">Dell</a> Official Stores:</strong> Buying directly online often gives you the best customization options for RAM/SSD, which retail stores lack.</li>
+            </ul>
+        </div>
+
+        <!-- Cost Reduction -->
+        <div class="glass-card full-width" style="animation-delay: 1.2s;">
+            <h2>📉 Cost Reduction</h2>
+            <p>If you need to reduce the price, here is what you can compromise on:</p>
+            <ul>
+                <li><strong>Buy a smaller SSD (1TB) and upgrade later:</strong> Laptop manufacturers often overcharge for storage, typically demanding €150 to €250 extra to upgrade from 1TB to 2TB at checkout. However, buying a high-quality 1TB NVMe SSD yourself only costs around €60 to €90. Many Windows laptops allow you to easily add a second SSD later when you need more space, saving you a lot of money. (Just verify the model supports a second drive!)</li>
+                <li><strong>Opt for an RTX 4060 instead of 4070/4080:</strong> The "RTX 4060" refers to the graphics card (GPU) made by NVIDIA. Think of it as a specialized processor for visuals. The 4070 and 4080 are much faster (and vastly more expensive) versions designed primarily for high-end gaming. Since you aren't gaming, the mid-range RTX 4060 provides all the necessary hardware features (like 8GB of video memory) needed for your OBS video encoding without the massive price markup of the higher tiers.</li>
+                <li><strong>Skip the 4K / OLED screen:</strong> Even with a large 17-inch or 18-inch laptop display, a high-quality standard IPS panel (QHD/1600p) is excellent for development and will save you hundreds of Euros compared to OLED options.</li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>
