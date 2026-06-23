@@ -148,19 +148,57 @@
             </div>
         </div>
 
-        <!-- Buying Guide -->
-        <div class="glass-card full-width" style="animation-delay: 1s;">
-            <h2>🛒 Where to Buy</h2>
-            <p>Here are some of the best places to buy PCs online and physically in Berlin:</p>
-            <ul>
-                <li><strong><a href="https://www.notebooksbilliger.de/" target="_blank" rel="noopener noreferrer">Notebooksbilliger (NBB)</a>:</strong> Great online prices. They have a physical store in <a href="https://www.google.com/maps/search/Notebooksbilliger+Berlin" target="_blank" rel="noopener noreferrer">Berlin (near Ku'damm)</a>.</li>
-                <li><strong><a href="https://www.cyberport.de/" target="_blank" rel="noopener noreferrer">Cyberport</a>:</strong> Another excellent online retailer with physical stores in Berlin (<a href="https://www.google.com/maps/search/Cyberport+Bikini+Berlin" target="_blank" rel="noopener noreferrer">Bikini Berlin</a>, <a href="https://www.google.com/maps/search/Cyberport+Steglitz+Berlin" target="_blank" rel="noopener noreferrer">Steglitz</a>).</li>
-                <li><strong><a href="https://www.lenovo.com/" target="_blank" rel="noopener noreferrer">Lenovo</a> / <a href="https://www.dell.com/" target="_blank" rel="noopener noreferrer">Dell</a> Official Stores:</strong> Buying directly online often gives you the best customization options for RAM/SSD, which retail stores lack.</li>
-            </ul>
+        <!-- Estimator Panel -->
+        <div class="glass-card full-width" style="animation-delay: 0.9s;">
+            <h2>🧮 Custom Build Estimator</h2>
+            <p>Select your desired configuration to get an estimated total cost.</p>
+            
+            <div class="calculator-container">
+                <div class="calc-options">
+                    <div class="calc-group">
+                        <label for="baseModel">Base System</label>
+                        <select id="baseModel" class="calc-select">
+                            <option value="1200">Standard Workstation (No GPU)</option>
+                            <option value="1800">AI Workstation (RTX 4060 GPU)</option>
+                        </select>
+                    </div>
+
+                    <div class="calc-group">
+                        <label for="ramOption">RAM Memory</label>
+                        <select id="ramOption" class="calc-select">
+                            <option value="0">32GB DDR5 (Included)</option>
+                            <option value="150">64GB DDR5 (+€150)</option>
+                        </select>
+                    </div>
+
+                    <div class="calc-group">
+                        <label for="ssdOption">Storage (SSD)</label>
+                        <select id="ssdOption" class="calc-select">
+                            <option value="0">1TB NVMe Gen4 (Included)</option>
+                            <option value="120">2TB NVMe Gen4 (+€120)</option>
+                            <option value="250">4TB NVMe Gen4 (+€250)</option>
+                        </select>
+                    </div>
+
+                    <div class="calc-group">
+                        <label for="screenOption">Display</label>
+                        <select id="screenOption" class="calc-select">
+                            <option value="0">Standard QHD IPS (Included)</option>
+                            <option value="200">4K OLED Display (+€200)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="calc-total-card">
+                    <h3>Estimated Total</h3>
+                    <div class="calc-price" id="totalPrice">€1,200</div>
+                    <p class="calc-note">Prices are estimates based on current market rates in Germany.</p>
+                </div>
+            </div>
         </div>
 
         <!-- Cost Reduction -->
-        <div class="glass-card full-width" style="animation-delay: 1.2s;">
+        <div class="glass-card full-width" style="animation-delay: 1s;">
             <h2>📉 Cost Reduction</h2>
             <img src="laptop_upgrade.png" alt="Manual Laptop Upgrade" class="illustration">
             <p>If you need to reduce the price, here is what you can compromise on:</p>
@@ -171,6 +209,44 @@
             </ul>
         </div>
 
+        <!-- Buying Guide -->
+        <div class="glass-card full-width" style="animation-delay: 1.2s;">
+            <h2>🛒 Where to Buy</h2>
+            <p>Here are some of the best places to buy PCs online and physically in Berlin:</p>
+            <ul>
+                <li><strong><a href="https://www.notebooksbilliger.de/" target="_blank" rel="noopener noreferrer">Notebooksbilliger (NBB)</a>:</strong> Great online prices. They have a physical store in <a href="https://www.google.com/maps/search/Notebooksbilliger+Berlin" target="_blank" rel="noopener noreferrer">Berlin (near Ku'damm)</a>.</li>
+                <li><strong><a href="https://www.cyberport.de/" target="_blank" rel="noopener noreferrer">Cyberport</a>:</strong> Another excellent online retailer with physical stores in Berlin (<a href="https://www.google.com/maps/search/Cyberport+Bikini+Berlin" target="_blank" rel="noopener noreferrer">Bikini Berlin</a>, <a href="https://www.google.com/maps/search/Cyberport+Steglitz+Berlin" target="_blank" rel="noopener noreferrer">Steglitz</a>).</li>
+                <li><strong><a href="https://www.lenovo.com/" target="_blank" rel="noopener noreferrer">Lenovo</a> / <a href="https://www.dell.com/" target="_blank" rel="noopener noreferrer">Dell</a> Official Stores:</strong> Buying directly online often gives you the best customization options for RAM/SSD, which retail stores lack.</li>
+            </ul>
+        </div>
+
     </div>
+
+    <script>
+        function calculateTotal() {
+            const basePrice = parseInt(document.getElementById('baseModel').value);
+            const ramPrice = parseInt(document.getElementById('ramOption').value);
+            const ssdPrice = parseInt(document.getElementById('ssdOption').value);
+            const screenPrice = parseInt(document.getElementById('screenOption').value);
+            
+            const total = basePrice + ramPrice + ssdPrice + screenPrice;
+            
+            const formattedTotal = '€' + total.toLocaleString('en-US');
+            
+            const priceDisplay = document.getElementById('totalPrice');
+            priceDisplay.textContent = formattedTotal;
+            
+            priceDisplay.style.transform = 'scale(1.1)';
+            setTimeout(() => {
+                priceDisplay.style.transform = 'scale(1)';
+            }, 150);
+        }
+
+        document.querySelectorAll('.calc-select').forEach(select => {
+            select.addEventListener('change', calculateTotal);
+        });
+        
+        calculateTotal();
+    </script>
 </body>
 </html>
