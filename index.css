@@ -137,6 +137,11 @@ h3 {
     color: #e2e8f0;
 }
 
+h3 a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
 p {
     margin-bottom: 1rem;
     color: var(--text-secondary);
